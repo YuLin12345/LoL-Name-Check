@@ -8,9 +8,6 @@
 
 import UIKit
 
-//Variables.
-var summonerName = String() //SummonerName
-
 //Removing white space for parsing.
 extension String {
     func removingWhitespaces() -> String {
@@ -58,13 +55,13 @@ class ViewController: UIViewController {
         
         summonerName = summonerNameTextField.text!.removingWhitespaces()
         
-        getResult()
+        getSummonerAPI()
         
         //If ID is not equal 0.
-        if(id != 0) {
+        if(summonerId != 0) {
             profileImage.image = UIImage(named: "\(profileIconId)")
             levelLabel.text! = String(summonerLevel)
-            summonerNameLabel.text! = name
+            summonerNameLabel.text! = summonerNameTextField.text!
             availabilityLabel.text! = String(describing: lastPlayed)
             estimateLabel.text! = "Estimated Summoner Name Expire"
             
