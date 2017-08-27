@@ -19,7 +19,7 @@ var summonerLevel = Int()       //summonerLevel
 var statusCode = Int()          //status_code from API
 
 //Test API Key. Get it from developer.riotgames.com
-var apiKey = "RGAPI-446bbdd6-f850-47fe-9f7a-fee4663a4a05"
+var apiKey = "RGAPI-a80cc6d2-caf1-4067-99d5-27d6a6a35a8b"
 
 //Get parsed data results.
 func getResult() {

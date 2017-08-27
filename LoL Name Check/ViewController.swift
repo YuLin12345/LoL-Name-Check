@@ -21,6 +21,9 @@ extension String {
 
 class ViewController: UIViewController {
     
+    //Image.
+    @IBOutlet weak var profileImage: UIImageView!
+    
     //Labels.
     @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var summonerNameLabel: UILabel!
@@ -59,6 +62,7 @@ class ViewController: UIViewController {
         
         //If ID is not equal 0.
         if(id != 0) {
+            profileImage.image = UIImage(named: "\(profileIconId)")
             levelLabel.text! = String(summonerLevel)
             summonerNameLabel.text! = name
             availabilityLabel.text! = String(describing: lastPlayed)
@@ -77,32 +81,26 @@ class ViewController: UIViewController {
             else if(summonerLevel >= 21 && summonerLevel <= 30) {
                 expireLabel.text! = String(describing: date21to30)
             }
+            unhideLabels()
         }
             //If statusCode equals 404 - Summoner not found or exist.
         else if(statusCode == 404) {
-            levelLabel.text! = ""
+            hideLabels()
             summonerNameLabel.text! = "No summoner name found."
-            availabilityLabel.text! = ""
-            estimateLabel.text! = ""
-            expireLabel.text! = ""
+            summonerNameLabel.isHidden = false
         }
             //If statusCode equals 400, 401, 403, 500, 502, 503, 504 there is Riot API error.
         else if(statusCode == 400 || statusCode == 401 || statusCode == 403 || statusCode == 500 || statusCode == 502 || statusCode == 503 || statusCode == 504) {
-            levelLabel.text! = ""
+            hideLabels()
             summonerNameLabel.text! = "API error."
-            availabilityLabel.text! = ""
-            estimateLabel.text! = ""
-            expireLabel.text! = ""
+            summonerNameLabel.isHidden = false
         }
             //Else try again.
         else {
-            levelLabel.text! = ""
+            hideLabels()
             summonerNameLabel.text! = "Try again."
-            availabilityLabel.text! = ""
-            estimateLabel.text! = ""
-            expireLabel.text! = ""
+            summonerNameLabel.isHidden = false
         }
-        unhideLabels()
     }
     
     override func viewDidLoad() {
@@ -116,6 +114,7 @@ class ViewController: UIViewController {
     
     //Hide labels.
     func hideLabels() {
+        profileImage.isHidden = true
         levelLabel.isHidden = true
         summonerNameLabel.isHidden = true
         availabilityLabel.isHidden = true
@@ -125,6 +124,7 @@ class ViewController: UIViewController {
     
     //Unhide labels.
     func unhideLabels() {
+        profileImage.isHidden = false
         levelLabel.isHidden = false
         summonerNameLabel.isHidden = false
         availabilityLabel.isHidden = false
