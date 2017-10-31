@@ -21,7 +21,7 @@ var revisionDate = Int()        //revisionDate - LastPlayed
 var statusCode = Int()          //status_code from API
 
 //Test API Key. Get it from developer.riotgames.com
-var apiKey = "RGAPI-a80cc6d2-caf1-4067-99d5-27d6a6a35a8b"
+var apiKey = "RGAPI-b37ada3e-ec4c-40c9-9bee-e3074524df6b"
 
 //Get parsed data results.
 func getSummonerAPI() {
