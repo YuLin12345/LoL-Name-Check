@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		623BD3361F4BEE5700B5D76A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 623BD30F1F4BEE2C00B5D76A /* Alamofire.framework */; };
-		623BD3371F4BEE5B00B5D76A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 623BD3291F4BEE4300B5D76A /* SwiftyJSON.framework */; };
+		624C2FB91FA8FFA50022A121 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 623BD30F1F4BEE2C00B5D76A /* Alamofire.framework */; };
+		624C2FBA1FA8FFA50022A121 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 623BD30F1F4BEE2C00B5D76A /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		624C2FBE1FA8FFA70022A121 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 623BD3291F4BEE4300B5D76A /* SwiftyJSON.framework */; };
+		624C2FBF1FA8FFA70022A121 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 623BD3291F4BEE4300B5D76A /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		625C12C11F4BE595000A81B2 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625C12C01F4BE595000A81B2 /* Connection.swift */; };
 		62E850E51F4B97DC004B9E13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E850E41F4B97DC004B9E13 /* AppDelegate.swift */; };
 		62E850E71F4B97DC004B9E13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E850E61F4B97DC004B9E13 /* ViewController.swift */; };
@@ -132,6 +134,20 @@
 			remoteGlobalIDString = 2E4FEFDA19575BE100351305;
 			remoteInfo = "SwiftyJSON iOS";
 		};
+		624C2FBB1FA8FFA50022A121 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 623BD3031F4BEE2C00B5D76A /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+		624C2FC01FA8FFA70022A121 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 623BD31E1F4BEE4300B5D76A /* SwiftyJSON.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E4FEFDA19575BE100351305;
+			remoteInfo = "SwiftyJSON iOS";
+		};
 		62E850F61F4B97DC004B9E13 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 62E850D91F4B97DC004B9E13 /* Project object */;
@@ -147,6 +163,21 @@
 			remoteInfo = "LoL Name Check";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		624C2FBD1FA8FFA50022A121 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				624C2FBF1FA8FFA70022A121 /* SwiftyJSON.framework in Embed Frameworks */,
+				624C2FBA1FA8FFA50022A121 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		623BD3031F4BEE2C00B5D76A /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
@@ -172,8 +203,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				623BD3371F4BEE5B00B5D76A /* SwiftyJSON.framework in Frameworks */,
-				623BD3361F4BEE5700B5D76A /* Alamofire.framework in Frameworks */,
+				624C2FBE1FA8FFA70022A121 /* SwiftyJSON.framework in Frameworks */,
+				624C2FB91FA8FFA50022A121 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,12 +325,15 @@
 				62E850DD1F4B97DC004B9E13 /* Sources */,
 				62E850DE1F4B97DC004B9E13 /* Frameworks */,
 				62E850DF1F4B97DC004B9E13 /* Resources */,
+				624C2FBD1FA8FFA50022A121 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				623BD33D1F4BEEAD00B5D76A /* PBXTargetDependency */,
 				623BD33B1F4BEEA900B5D76A /* PBXTargetDependency */,
+				624C2FBC1FA8FFA50022A121 /* PBXTargetDependency */,
+				624C2FC11FA8FFA70022A121 /* PBXTargetDependency */,
 			);
 			name = "LoL Name Check";
 			productName = "LoL Name Check";
@@ -572,6 +606,16 @@
 			name = "SwiftyJSON iOS";
 			targetProxy = 623BD33C1F4BEEAD00B5D76A /* PBXContainerItemProxy */;
 		};
+		624C2FBC1FA8FFA50022A121 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire iOS";
+			targetProxy = 624C2FBB1FA8FFA50022A121 /* PBXContainerItemProxy */;
+		};
+		624C2FC11FA8FFA70022A121 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SwiftyJSON iOS";
+			targetProxy = 624C2FC01FA8FFA70022A121 /* PBXContainerItemProxy */;
+		};
 		62E850F71F4B97DC004B9E13 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 62E850E01F4B97DC004B9E13 /* LoL Name Check */;
@@ -651,7 +695,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -702,7 +746,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -714,6 +758,7 @@
 		62E8510A1F4B97DC004B9E13 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 257B3G5H93;
 				INFOPLIST_FILE = "LoL Name Check/Info.plist";
@@ -728,6 +773,7 @@
 		62E8510B1F4B97DC004B9E13 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 257B3G5H93;
 				INFOPLIST_FILE = "LoL Name Check/Info.plist";
